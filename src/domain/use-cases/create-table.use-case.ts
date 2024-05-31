@@ -22,8 +22,10 @@ export class CreateTable implements CreateTableUseCase {
         let multiplications = ''
         for (let i = 1; i <= limit ; i++) {
     
-            multiplications = multiplications + `${base} X ${i} = ${base*i}\n`
+            multiplications = multiplications + `${base} X ${i} = ${base*i}`
             
+            if ( i < limit ) multiplications += '\n'
+
         }
 
         return multiplications
